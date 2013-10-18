@@ -29,6 +29,7 @@ verify = (method, route, status, data, checkResult) ->
 
 describe 'model', ->
   it 'should save data', ->
+    should.exist User, 'expected User model to be defined'
     User.create Factory.userData, (err, user) ->
       should.not.exist err
       should.exist user
@@ -57,7 +58,7 @@ describe 'api', ->
       done()
 
   it 'should respond to GET /users/:id', (done) ->
-    verify 'get', "users/#{@user._id}", 200, null, (result) ->
+    verify 'get', "users/#{@user?._id}", 200, null, (result) ->
       should.exist result?.user, 'expected {user: {}}'
       result.user.should.include Factory.userData
       done()
@@ -78,13 +79,13 @@ describe 'api', ->
     data = {
       role: 'Bilge Cleaner'
     }
-    verify 'put', "users/#{@user._id}", 200, data, (result) ->
+    verify 'put', "users/#{@user?._id}", 200, data, (result) ->
       should.exist result?.user
       result.user.should.include data
       done()
 
   it 'should respond to DELETE /users/:id', (done) ->
-    verify 'del', "users/#{@user._id}", 200, null, (result) ->
+    verify 'del', "users/#{@user?._id}", 200, null, (result) ->
 
       if Factory.connected
         User.count (err, count) ->
