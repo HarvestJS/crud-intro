@@ -1,0 +1,31 @@
+{
+  "name":"crud-intro",
+  "description":"This is an introduction to setting up CRUD with Mongo and Express.",
+  "version":"0.0.1",
+  "homepage":"http://github.com/TorchlightSoftware/crud-intro",
+  "repository":"git://github.com/TorchlightSoftware/crud-intro.git",
+  "author":"Torchlight Software <info@torchlightsoftware.com> (http://torchlightsoftware.com)",
+  "main":"./index.js",
+
+  "dependencies":{
+  },
+  "devDependencies":{
+    "coffee-script":"*",
+    "mocha":"*",
+    "factory-worker":"*",
+    "request":"*",
+    "should":"*"
+  },
+  "engines":{
+    "node":">= 0.8.4"
+  },
+  "licenses":[
+    {
+      "type":"MIT",
+      "url":"http://github.com/torchlightsoftware/crud-intro/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test":"mocha"
+  }
+}
