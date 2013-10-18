@@ -27,6 +27,13 @@ verify = (method, route, status, data, checkResult) ->
 
     checkResult result
 
+describe 'model', ->
+  it 'should save data', ->
+    User.create Factory.userData, (err, user) ->
+      should.not.exist err
+      should.exist user
+      user.should.include Factory.userData
+
 describe 'api', ->
 
   beforeEach (done) ->
