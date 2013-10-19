@@ -79,7 +79,12 @@ Check out the Mongoose documentation for details on how to do this:
 
 You can make these all strings.  Put your schema in the file user.js in the app folder.
 
-When you've got your schema created, run 'mocha'.  The test 'model should save data' should now pass.
+NOTE: Make sure you:
+
+1. Connect to the database
+2. Create a "Model" using your schema
+
+When you've got your model and schema created, run 'mocha'.  The test 'model should save data' should now pass.
 
 ## User Listing (GET /users)
 
