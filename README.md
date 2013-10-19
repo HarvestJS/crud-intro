@@ -38,10 +38,10 @@ We've included a test suite in this project.  In order to run it, install the CL
 npm install -g mocha
 ```
 
-Now let's install 'mongoose', the tool we'll be using to construct our schema:
+Now let's install 'mongoose', the tool we'll be using to construct our schema, and 'express':
 
 ```bash
-npm install mongoose --save
+npm install mongoose express --save
 ```
 
 When you pass the --save option, npm will add this module to your package.json dependencies.  If you're curious, open package.json to verify that 'mongoose' was added.
