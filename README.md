@@ -2,6 +2,8 @@
 
 This is an introduction to setting up CRUD with Mongo and Express.  The focus for this project is on learning concepts and technologies.  This approach is not recommended for an actual project - there are better tools that will save you time on that.
 
+You can find the (brief) introduction here: [http://slid.es/bitmage/crud-intro](http://slid.es/bitmage/crud-intro)
+
 ## Install Node
 
 You have Node installed right?  If not, grab it here:
