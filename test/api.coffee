@@ -28,6 +28,12 @@ verify = (method, route, status, data, checkResult) ->
     checkResult result
 
 describe 'model', ->
+  afterEach (done) ->
+    if Factory.connected
+      User.remove(done)
+    else
+      done()
+
   it 'should save data', ->
     should.exist User, 'expected User model to be defined'
     User.create Factory.userData, (err, user) ->
