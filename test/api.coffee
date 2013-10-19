@@ -3,6 +3,9 @@ mongoose = require 'mongoose'
 request = require 'request'
 logger = require 'torch'
 
+process.env.PORT = 3334
+port = process.env.PORT
+
 require '../app/server'
 
 Factory = require './helpers/factory'
@@ -12,7 +15,7 @@ verify = (method, route, status, data, checkResult) ->
   if data?
     form = {form: data}
 
-  request[method] "http://localhost:3333/#{route}", form, (err, res, body) ->
+  request[method] "http://localhost:#{port}/#{route}", form, (err, res, body) ->
     logger.yellow body
     should.not.exist err
     should.exist res
